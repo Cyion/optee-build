@@ -87,6 +87,7 @@ information.
 | [QEMU](http://wiki.qemu.org/Main_Page) |`PLATFORM=vexpress-qemu_virt`| Yes |
 | [QEMUv8](http://wiki.qemu.org/Main_Page) |`PLATFORM=vexpress-qemu_armv8a`| Yes |
 | [Raspberry Pi 3](https://www.raspberrypi.org/products/raspberry-pi-3-model-b) |`PLATFORM=rpi3`| Yes |
+| [Samsung ARTIK530](https://developer.artik.io/documentation/artik/getting-started) |`PLATFORM=artik`| Yes |
 | [Texas Instruments DRA7xx](http://www.ti.com/product/DRA746)|`PLATFORM=ti-dra7xx`| Yes |
 | [Texas Instruments AM57xx](http://www.ti.com/product/AM5728)|`PLATFORM=ti-am57xx`| Yes |
 | [Texas Instruments AM43xx](http://www.ti.com/product/AM4379)|`PLATFORM=ti-am43xx`| Yes |
@@ -107,6 +108,7 @@ Here is a list of manifests for the devices currently supported.
 | DRA7xx | `dra7xx.xml` | `dra7xx_stable.xml` | [ti.md] |
 | AM57xx | `am57xx.xml` | `am57xx_stable.xml` | [ti.md] |
 | AM43xx | `am43xx.xml` | `am43xx_stable.xml` | [ti.md] |
+| ARTIK530 | `artik530.xml` | `` | [artik.md] |
 
 # 7. Get and build the solution
 Below we will describe the general way of getting the source, building the
@@ -250,6 +252,7 @@ don't have to think about anything.
 # 8. FAQ
 Please have a look at out [FAQ] file for a list of questions commonly asked.
 
+[artik.md]: ./docs/artik.md
 [ccache]: https://ccache.samba.org
 [docs]: docs
 [FAQ]: faq.md
