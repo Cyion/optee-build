@@ -16,13 +16,13 @@ include common.mk
 ###############################################################################
 # Paths to git projects and various binaries
 ###############################################################################
-STAGING_AREA    ?= $(ROOT)/out
+STAGING_AREA    ?= $(ROOT)/optee_image
 U-BOOT_PATH     ?= $(ROOT)/u-boot
 UBOOT_SPL       ?= $(U-BOOT_PATH)/u-boot-raptor
 UBOOT_IMG       ?= $(U-BOOT_PATH)/u-boot_raptor.img
 UBOOT_ENV       ?= $(BUILD_PATH)/artik/uEnv.txt
 LINUX_IMAGE     ?= $(LINUX_PATH)/arch/arm/boot/zImage
-LINUX_DTBS      ?= $(wildcard $(LINUX_PATH)/arch/arm/boot/dts/artik530*.dtb)
+LINUX_DTBS      ?= $(wildcard $(LINUX_PATH)/arch/arm/boot/dts/s5p4418-artik530*.dtb)
 FIT_SOURCE      ?= $(BUILD_PATH)/artik/fitImage-artik530.its
 FIT_MAKEFILE    ?= $(BUILD_PATH)/artik/Makefile
 OPTEE_PLATFORM  ?= artik
