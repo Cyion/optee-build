@@ -22,13 +22,14 @@ UBOOT_SPL       ?= $(U-BOOT_PATH)/u-boot-raptor
 UBOOT_IMG       ?= $(U-BOOT_PATH)/u-boot_raptor.img
 UBOOT_ENV       ?= $(BUILD_PATH)/artik/uEnv.txt
 LINUX_IMAGE     ?= $(LINUX_PATH)/arch/arm/boot/zImage
-LINUX_DTBS      ?= $(wildcard $(LINUX_PATH)/arch/arm/boot/dts/s5p4418-artik530*.dtb)
-FIT_SOURCE      ?= $(BUILD_PATH)/artik/fitImage-artik530.its
+LINUX_DTBS      ?= $(wildcard $(LINUX_PATH)/arch/arm/boot/dts/exynos3250-artik5*.dtb)
+FIT_SOURCE      ?= $(BUILD_PATH)/artik/fitImage-artik520.its
 FIT_MAKEFILE    ?= $(BUILD_PATH)/artik/Makefile
-OPTEE_PLATFORM  ?= samsung-artik530
-U-BOOT_CONFIG   ?= artik530_raptor_defconfig
+OPTEE_PLATFORM  ?= samsung-artik520
+U-BOOT_CONFIG   ?= artik5_defconfig
+# until told otherwise, we can use the artik530 configuration here:
 CONFIG_TYPE     ?= artik530_raptor
-BUSYBOX_TARGET  ?= artik530
+BUSYBOX_TARGET  ?= artik520
 
 ###############################################################################
 # Debug options

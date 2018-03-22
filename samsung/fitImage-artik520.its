@@ -1,0 +1,49 @@
+/dts-v1/;
+
+/ {
+	description = "U-Boot fitImage";
+	#address-cells = <1>;
+
+	images {
+		kernel {
+			description = "Linux kernel";
+			data = /incbin/("zImage");
+			type = "kernel";
+			arch = "arm";
+			os = "linux";
+			compression = "none";
+			load = <0x40008000>;
+			entry = <0x40008000>;
+		};
+
+		fdt {
+			description = "artik 520 flattened device tree blob";
+			data = /incbin/("exynos3250-artik5.dtb");
+			type = "flat_dt";
+			arch = "arm";
+			compression = "none";
+			load = <0x40800000>;
+		};
+
+		optee {
+			description = "OPTEE os";
+			data = /incbin/("tee.bin");
+			type = "image";
+			arch = "arm";
+			compression = "none";
+			load = <0x57000000>;
+		};
+	};
+
+	configurations {
+		default = "config";
+
+		config {
+			description = "Linux kernel, FDT blob, OPTEE";
+			kernel = "kernel";
+			fdt = "fdt";
+			loadables = "optee";
+		};
+
+	};
+};
